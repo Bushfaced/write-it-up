@@ -4,16 +4,24 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  color: #e7ebed;
 }
 
 .login {
   display: flex;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
   height: 34px;
 }
 
 .login img {
   height: 30px;
+}
+
+html {
+  background: url(https://cdn.pixabay.com/photo/2015/10/20/19/35/calligraphy-998331_1280.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }

@@ -7,19 +7,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel='stylesheet' href='/stylesheets/style.css' />
   <title>Write It Up</title>
-
+<!-- ALL PAGES NAV BAR -->
   <nav>
-    <a id="home" href="/">Write It Up</a> <a id="home" href="/">Search</a> <a id="home" href="/">Vote</a>
+    <a id="home" href="/">Home</a> <a id="home" href="/">Search</a>   <a id="home" href="/">Vote</a>
     <% if (user) { %>
       <a id="home" href="/">My Profile</a>
       <a id="home" ref="/logout">LOG OUT</a>
       <% } else { %>
         <a id="home" href="/">Create Profile</a>
-        <a id="home" href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+        <a id="logo" href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
         <% } %>
-    
-    
-    
   </nav>
 </head>
 <body>
+  

@@ -3,7 +3,7 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-#home {
+.home {
   color: #e7ebed;
   text-decoration: none;
   float: left;
@@ -31,8 +31,3 @@ html {
   background-size: cover;
 }
 
-#homeBox {
-  display: flexbox;
-  border: solid black 1px;
-  margin: auto;
-}

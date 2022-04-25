@@ -8,14 +8,14 @@ body > nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 0 20px 0 30px;
+  padding: 0 20px 150px 30px;
 }
 
 .home {
   color: #e7ebed;
   text-decoration: none;
   float: left;
-  width: 20%;
+  width: 100vh;
   font-size: xx-large;
 }
 
@@ -25,6 +25,7 @@ body > nav {
   align-items: center;
   height: 34px;
   color: #e7ebed;
+  text-decoration: none;
 }
 
 #login img {
@@ -45,4 +46,36 @@ body > main {
   flex-direction: column;
   align-items: center;
   padding: 20px;
+}
+
+.displayTopHome {
+  border: black solid ;
+}
+
+.homeBox {
+  display: flex;
+  justify-content: center;
+  border: solid black;
+}
+
+#authorLink {
+  display: flex;
+  flex-direction: column;
+  color: #e7ebed;
+}
+
+#genre {
+  color: #e7ebed;
+}
+
+#profile {
+  font-size: 2em;
+}
+
+.dropdown {
+  float: right;
+}
+
+#myLinks {
+  padding: 1rem;
 }

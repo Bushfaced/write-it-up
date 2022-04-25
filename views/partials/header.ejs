@@ -7,14 +7,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel='stylesheet' href='/stylesheets/style.css' />
   <title>Write It Up</title>
+  <!-- ALL PAGES NAV BAR -->
+  <nav>
+    <a class="home" href="/">Home</a> <a class="home" href="/">Search</a> <a class="home" href="/">Vote</a>
+    <% if (user) { %>
+      <a class="home" href="/">My Profile</a> <a id="login" href="/logout">LOG OUT&nbsp;<img
+          src="https://i.imgur.com/FHjYyi0.png"></a>
+      <% } else { %>
+        <a class="home" href="/">Create Profile</a> <a id="login" href="/auth/google">LOG IN&nbsp;<img
+            src="https://i.imgur.com/FHjYyi0.png"></a>
+        <% } %>
+  </nav>
 </head>
 <body>
-  <!-- ALL PAGES NAV BAR -->
-    <nav>
-      <a class="home" href="/">Home</a> <a class="home" href="/">Search</a>   <a class="home" href="/">Vote</a>
-      <% if (user) { %>
-        <a class="home" href="/">My Profile</a> <a id="login" href="/logout">LOG OUT&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
-        <% } else { %>
-          <a class="home" href="/">Create Profile</a> <a id="login" href="/auth/google">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
-          <% } %>
-    </nav>
+  

@@ -3,6 +3,14 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+body > nav {
+  grid-area: nav;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 20px 0 30px;
+}
+
 .home {
   color: #e7ebed;
   text-decoration: none;
@@ -31,3 +39,10 @@ html {
   background-size: cover;
 }
 
+body > main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}

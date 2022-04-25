@@ -1,0 +1,13 @@
+<%- include('../partials/header') %>
+<!--------- Bio Creation Page ------------>
+<div>Please fill in the required fields and any additional links or information at the bottom</div>
+<form id="add-new-bio" action="/bios" method="POST">
+  <label>Display Name:</label>
+  <input type="text" name="name" required>
+  <label>Email:</label>
+  <input type="text" name="email" required>
+  <input type="submit" value="Create Bio">
+</form>
+
+
+<%- include('../partials/footer') %>

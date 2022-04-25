@@ -13,19 +13,20 @@
   <nav>
     <a class="home" href="/">Home</a> <a class="home" href="/">Search</a> <a class="home" href="/">Vote</a>
     <% if (user) { %>
-      <a class="home" id="profile" href="/">My Profile</a> <a id="login" href="/logout">LOG OUT&nbsp;<img
+      <a class="home" id="profile" href="/views/bios/new">My Profile</a> <a id="login" href="/logout">LOG OUT&nbsp;<img
           src="https://i.imgur.com/FHjYyi0.png"></a>
-      <% } else { %>
-        <a class="home" id="profile" href="/">Create Profile</a> <a id="login" href="/auth/google">LOG IN&nbsp;<img
+    <% } else { %>
+        <a class="home" id="profile" href="/views/bios/new">Create Profile</a> <a id="login" href="/auth/google">LOG IN&nbsp;<img
             src="https://i.imgur.com/FHjYyi0.png"></a>
-        <% } %>
+    <% } %>
   </nav>
+  <!-- home page display and selection area -->
   <main>
     <section class="homeBox">
       <div>
         <label id="genre">Choose a Genre:</label>
         <select class="dropdown">
-          <option value="top-5">Top 5</option>
+          <option value="top-5">Top 3</option>
           <option value="flashFict">Best Flash</option>
           <option value="shorts">Best Short Stories</option>
           <option value="poems">Best Poems</option>
@@ -34,16 +35,8 @@
           <a href="#" id="authorLink">Author 1</a>
           <a href="#" id="authorLink">Author 2</a>
           <a href="#" id="authorLink">Author 3</a>
-          <a href="#" id="authorLink">Author 4</a>
-          <a href="#" id="authorLink">Author 5</a>
         </div>
       </div> 
     </section> 
   
-    <!-- You can't get additional profile info from Google, so you will want to add the functionality for viewing/editing the user's additional profile info.
-    Since profiles are a part of your app, I would create routes/profiles.js, controllers/profiles.js & a views/profiles folder.
-    Add the additional data to your userSchema, for example:
-    bio: String,
-    Then, after a new user signs up, or if they log in and they still haven't entered their bio info, you can redirect them to the
-    GET /profiles/edit
-    route... (edited)  -->
+    

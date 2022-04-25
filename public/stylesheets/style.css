@@ -62,6 +62,7 @@ body > main {
   display: flex;
   flex-direction: column;
   color: #e7ebed;
+  padding: 1em;
 }
 
 #genre {
@@ -74,8 +75,4 @@ body > main {
 
 .dropdown {
   float: right;
-}
-
-#myLinks {
-  padding: 1rem;
 }

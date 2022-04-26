@@ -1,5 +1,22 @@
 <%- include('../partials/header') %>
-<!--------- top 5 box ------------>
+<!-- home page display and selection area -->
+<main>
+  <section class="homeBox">
+    <div>
+      <label id="genre">Choose a Genre:</label>
+      <select class="dropdown">
+        <option value="top-5">Top 3</option>
+        <option value="flashFict">Best Flash</option>
+        <option value="shorts">Best Short Stories</option>
+        <option value="poems">Best Poems</option>
+    </select>
+      <div id="myLinks" class="dropdown-content">
+        <a href="views/bios/new" id="authorLink">Author 1</a>
+        <a href="views/bios/new" id="authorLink">Author 2</a>
+        <a href="views/bios/new" id="authorLink">Author 3</a>
+      </div>
+    </div> 
+  </section> 
 
 
 

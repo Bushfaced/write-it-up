@@ -4,7 +4,9 @@ const Post = require('../models/post');
 module.exports = {
   new: newPost,
   create,
-  delete: deletePost,
+  index,
+  forUser,
+  // delete: deletePost,
 }
 
 function newPost(req, res) {
@@ -18,12 +20,21 @@ function create(req, res) {
   Post.create(req.body, function(err, post) {
     res.redirect('/posts')
   });
-  Post.post.push(req.body);
-  Post.save(function(err) {
-    res.redirect(`/posts/${req.params._id}`);
+}
+
+function forUser(req, res) {
+  Post.find({user: req.user._id}, function(err, posts) {
+    res.render('posts/index', { posts, title: 'My Posts' });
   });
 }
 
-function deletePost(req, res) {
-
+function index(req, res) {
+  Post.find({}, function(err, posts) {
+    res.render('posts/index', { posts, title: 'All Posts' });
+  })
 }
+
+
+// function deletePost(req, res) {
+
+// }

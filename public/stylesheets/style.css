@@ -8,7 +8,7 @@ body > nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 0 20px 150px 30px;
+  padding: 0 20px 100px 30px;
 }
 
 .home {
@@ -54,7 +54,7 @@ body > main {
 
 .homeBox {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   border: solid black;
 }
 

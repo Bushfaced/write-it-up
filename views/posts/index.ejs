@@ -13,14 +13,17 @@
         <%= p.title %>
       </p>
       <p>
-        <%= %>
+        <%= p.genre %>
       </p>
       <p>
         <%= p.content %>
       </p>
       <p>
-        <%= p.userName %>
+        <img src="<%= p.userAvatar %>"> <%= p.userName %>
       </p>
+      <P>
+        
+      </P>
     </article>
     <td>
       <% if (user && user._id.equals(p.user)) { %>

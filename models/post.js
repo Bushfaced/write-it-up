@@ -6,6 +6,9 @@ const postSchema = new Schema({
   title: {
     type: String,
   },
+  genre: {
+    type: String,
+  },
   content: {
     type: String,
   },

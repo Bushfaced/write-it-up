@@ -2,11 +2,20 @@
 
 <h2><%= title %></h2>
 <% posts.forEach(function(p) { %>
-  <article>
+  <article id="postContent">
+    <p><%= p.title %></p>
     <p><%= p.content %></p>
     <p><%= p.userName %></p>
   </article>
+  <td>
+    <% if (user && user._id.equals(p.user)) { %>
+      <form action="/posts/<%= p._id %>?_method=DELETE" method="POST">
+        <button type="submit">delete</button>
+      </form>
+    <% } %>
+  </td>
 <% }) %>
   
 
 <%- include('../partials/footer') %>
+

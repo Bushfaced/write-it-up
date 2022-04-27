@@ -12,6 +12,7 @@ require('./config/database');
 // configure passport
 require('./config/passport');
 
+
 var indexRouter = require('./routes/index');
 var postsRouter = require('./routes/posts');
 
@@ -35,6 +36,7 @@ app.use(session({
   saveUninitialized: true
 }));
 
+
 // Passport middleware
 app.use(passport.initialize());
 app.use(passport.session());
@@ -45,10 +47,12 @@ app.use(function(req, res, next) {
   next();
 });
 
+
 const isLoggedIn = require('./config/auth');
 
 app.use('/', indexRouter);
 app.use('/posts', postsRouter);
+app.use('/', isLoggedIn, postsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

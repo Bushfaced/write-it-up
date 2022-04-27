@@ -3,11 +3,12 @@
   <h2>
     <%= title %>
   </h2>
-  <form class="search" action="/posts" method="GET">
+  <form id="searchBar" action="/posts" method="GET">
     <input type="text" placeholder="Search Authors..." name="authorName">
     <button><i class="fas fa-search"></i>Search</button>
   </form>
   <% posts.forEach(function(p) { %>
+    <% console.log(p._id) %>
     <article id="postContent">
       <p>
         <%= p.title %>
@@ -19,17 +20,17 @@
         <%= p.content %>
       </p>
       <p>
-        <img src="<%= p.userAvatar %>"> <%= p.userName %>
+        <img id="userAvatar" src="<%= p.userAvatar %>"> <%= p.userName %>
       </p>
-
     </article>
+    
     <td>
       <% if (user && user._id.equals(p.user)) { %>
         <form action="/posts/<%= p._id %>?_method=DELETE" method="POST">
           <button type="submit">delete</button>
         </form>
-        <% } %>
+      <% } %>
     </td>
-    <% }) %>
+  <% }) %>
  
-      <%- include('../partials/footer') %>
+<%- include('../partials/footer') %>

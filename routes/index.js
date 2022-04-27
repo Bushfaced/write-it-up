@@ -3,7 +3,7 @@ var router = express.Router();
 const passport = require('passport');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', function (req, res, next) {
   res.render('index', { title: 'Write It Up' });
 });
 
@@ -26,7 +26,7 @@ router.get('/oauth2callback', passport.authenticate(
   }
 ));
 
-router.get('/logout', function(req, res){
+router.get('/logout', function (req, res) {
   req.logout();
   res.redirect('/');
 });

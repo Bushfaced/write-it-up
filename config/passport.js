@@ -13,9 +13,9 @@ passport.use(
     // The verify callback function
     // runs everytime a user logs in with
     // Google OAuth
-    function(accessToken, refreshToken, profile, cb) {
+    function (accessToken, refreshToken, profile, cb) {
       // a user has logged in
-      User.findOne({googleId: profile.id}).then(async function(user) {
+      User.findOne({ googleId: profile.id }).then(async function (user) {
         // returning user
         if (user) return cb(null, user);
         // we have a new user via OAuth!
@@ -35,11 +35,11 @@ passport.use(
   )
 );
 
-passport.serializeUser(function(user, cb) {
+passport.serializeUser(function (user, cb) {
   cb(null, user._id);
 });
 
-passport.deserializeUser(async function(userId, cb) {
+passport.deserializeUser(async function (userId, cb) {
   const user = await User.findById(userId);
   cb(null, user);
 });

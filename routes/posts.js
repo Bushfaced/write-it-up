@@ -13,6 +13,6 @@ router.get('/user', postsCtrl.forUser);
 //GET /posts/:id
 // router.get('/:id', postsCtrl.show);
 //DELETE /posts/:id
-// router.delete('/posts/:id', postsCtrl.deletePost);
+router.delete('/:id', postsCtrl.delete);
 
 module.exports = router;

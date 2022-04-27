@@ -11,7 +11,7 @@ router.get('/', postsCtrl.index);
 //GET /posts/user
 router.get('/user', postsCtrl.forUser);
 //GET /posts/:id
-router.get('/:id', postsCtrl.show);
+// router.get('/:id', postsCtrl.show);
 //DELETE /posts/:id
 router.delete('/:id', postsCtrl.delete);
 //PUT /posts/:id .update

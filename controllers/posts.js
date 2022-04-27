@@ -7,7 +7,7 @@ module.exports = {
   index,
   forUser,
   delete: deletePost,
-  show,
+  // show,
 };
 
 function newPost(req, res) {
@@ -35,9 +35,9 @@ function index(req, res) {
   });
 };
 
-function show(req, res) {
+// function show(req, res) {
   
-};
+// };
 
 function deletePost(req, res) {
   req.body.user = req.user._id;

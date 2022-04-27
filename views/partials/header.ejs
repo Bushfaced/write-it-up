@@ -18,6 +18,10 @@
       <a class="home" id="navPosts" href="/posts/new">Add Post</a>
       <a class="home" id="navPosts" href="/posts">All Posts</a>
       <a class="home" id="navPosts" href="/posts/user">My Posts</a>
+      <form class="search" action="/posts/search" method="GET">
+        <input class="bar" type="text" placeholder="Search Authors..." name="authorName">
+        <button><i class="fas fa-search"></i>Search</button>
+      </form>
       <a id="login" href="/logout">LOG OUT&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
       <% } else { %>
         <a id="login" href="/auth/google">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>

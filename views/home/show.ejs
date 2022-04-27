@@ -1,3 +1,19 @@
 <%- include('./partials/header') %>
+ <!-- home page display and selection area -->
+ <main>
+  <section class="homeBox">
+    <div>
+      <label id="genre">Choose a Genre:</label>
+      <select class="dropdown">
+        <option value="top-5">Top 3</option>
+        <option value="flashFict">Best Flash</option>
+        <option value="shorts">Best Short Stories</option>
+        <option value="poems">Best Poems</option>
+      </select>
+      <div id="myLinks" class="dropdown-content">
+        <a href="user.id" id="authorLinkA">Author</a>
+      </div>
+    </div>
+  </section>
 
   <%- include('./partials/footer') %>

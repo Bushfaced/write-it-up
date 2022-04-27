@@ -35,19 +35,14 @@ function index(req, res) {
 }
 
 function deletePost(req, res, next) {
-  // Note the cool "dot" syntax to query on the property of a subdoc
-  Post.findOne({'post._id': req.params.id, 'post.user': req.user._id}).then(function(post) {
-    // Rogue user!
+  Post.findOne({'post.id': req.params.id, 'post.user': req.user._id}).then(function(post) {
     if (!post) return res.redirect('/posts');
-    // Remove the review using the remove method available on Mongoose arrays
-    post.remove(req.params.id);
-    // Save the updated movie
+    post.remove(req.params._id);
     post.save().then(function() {
-      // Redirect back to the movie's show view
       res.redirect(`/posts/${post._id}`);
     }).catch(function(err) {
-      // Let Express display an error
       return next(err);
     });
+    res.redirect(`/posts/user`);
   });
 }

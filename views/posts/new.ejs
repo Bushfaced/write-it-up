@@ -1,12 +1,11 @@
 <%- include('../partials/header') %>
 
-  <h2 id="postPage">Posts</h2>
+  <h2 class="pTitle">Posts</h2>
   <% if (user) { %>
-    <form id="add-post" method="POST" action="/posts">
-      <label>Post:</label>
+    <form class="addPost" method="POST" action="/posts">
       <input name="title" type="text" value="Title">
       <input name="genre" type="text" value="Genre">
-      <textarea name="content"></textarea>
+      <textarea id="contentBox" name="content"></textarea>
       <input type="submit" value="Add Post">
     </form>
   <% } %>

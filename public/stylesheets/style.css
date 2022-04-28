@@ -85,9 +85,28 @@ body > main {
   border-radius: 50%;
 }
 
-#add-post {
+#edPost {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 50%;
+  max-width: 70%;
+  margin: auto;
+}
+
+.addPost {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 70%;
+  margin: auto;
+}
+
+.pTitle {
+  text-align: center;
+  margin: auto;
+  padding-bottom: 15px;
+}
+
+#contentBox {
+  min-height: 200px;
 }

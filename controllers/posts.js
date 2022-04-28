@@ -7,8 +7,24 @@ module.exports = {
   index,
   forUser,
   delete: deletePost,
-  show,
+  // show,
   edit,
+  update,
+};
+
+function update(req, res) {
+  console.log(req.body);
+  Post.findOneAndUpdate({ _id: req.params.id, user: req.user._id}, req.body, {new: true}, function(err, updatedPost) {
+    console.log(updatedPost);
+    if (err || !updatedPost) return res.redirect('/posts');
+    res.redirect(`/posts`)
+  })
+};
+
+function edit(req, res) {
+  Post.findById(req.params.id, function(err, foundPost) {
+    res.render('posts/edit', { foundPost, title: foundPost.title });
+  });
 };
 
 function newPost(req, res) {
@@ -32,18 +48,8 @@ function forUser(req, res) {
 
 function index(req, res) {
   Post.find({}, function (err, posts) {
-      res.render('posts/index', { posts, title: 'All Posts' });
-    });
-  };
-  
-function show(req, res) {
-  console.log("hello from show");
-  //console.log(req);
-  console.log(req.params.id);
-  Post.find({ _id: req.params.id }, function(err, foundPost) {
-    console.log(foundPost);
-    res.render('posts/edit', { foundPost, title: foundPost.title });
-  });
+    res.render('posts/index', { posts, title: 'All Posts' })
+  })
 };
 
 function deletePost(req, res) {
@@ -57,7 +63,10 @@ function deletePost(req, res) {
   });
 }; 
 
-function edit(req, res) {
-  console.log("In edit");
-  console.log(req);
-};
+
+
+
+
+// function show(req, res) {
+//   //   
+// };

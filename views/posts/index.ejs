@@ -3,10 +3,7 @@
   <h2>
     <%= title %>
   </h2>
-  <form id="searchBar" action="/posts" method="GET">
-    <input type="text" placeholder="Search Authors..." name="authorName">
-    <button><i class="fas fa-search"></i>Search</button>
-  </form>
+  <br>
   <% posts.forEach(function(p) { %>
     <article id="postContent">
       <h3>
@@ -14,9 +11,6 @@
       </h3>
       <p>
         <%= p.genre %>
-      </p>
-      <p>
-        <%= p.content %>
       </p>
       <h4>
         <img id="userAvatar" src="<%= p.userAvatar %>"> <%= p.userName %>

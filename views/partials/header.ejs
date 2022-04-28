@@ -13,13 +13,14 @@
   <!-- ALL PAGES NAV BAR -->
   <nav>
     <a class="home" href="/">Home</a>
-    <a class="home" href="/searches">Search</a>
     <% if (user) { %>
       <a class="home" id="navPosts" href="/posts/new">Add Post</a>
       <a class="home" id="navPosts" href="/posts">All Posts</a>
       <a class="home" id="navPosts" href="/posts/user">My Posts</a>
       <a id="login" href="/logout">LOG OUT&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
       <% } else { %>
+        <a class="home" href="/posts">All Posts</a>
         <a id="login" href="/auth/google">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
       <% } %>
   </nav>
+

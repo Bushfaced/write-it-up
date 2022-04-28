@@ -1,14 +1,16 @@
 <%- include('../partials/header') %>
 
-  <h2 id="postPage">Posts</h2>
-  <% if (user) { %> 
-    <form id="add-post" method="PUT" action="/posts/update/<%= foundPost[0]._id %>">
-      <label>Post:</label>
-      <input name="title" type="text" value="<%= foundPost[0].title %>" >
-      <input name="genre" type="text" value="<%= foundPost[0].genre %>">
-      <textarea name="content"><%= foundPost[0].content %></textarea>
-      <input type="submit" value="Update Post">
-    </form>
-  <% } %>
 
+<% console.log(user._id) %>
+<% console.log(foundPost.user) %>
+<h2 class="updatePost">Update Post</h2>
+<form action="/posts/<%= foundPost._id %>?_method=PUT" method="POST" autocomplete="off">
+  <label>Post:</label>
+  <input name="title" type="text" value="<%= foundPost.title %>" >
+  <input name="genre" type="text" value="<%= foundPost.genre %>">
+  <textarea name="content"><%= foundPost.content %></textarea>
+    <% if (user && user._id.equals(foundPost.user)) { %>
+        <input type="submit" value="Update Post">
+    <% } %>    
+</form>
 <%- include('../partials/footer') %>

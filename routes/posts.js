@@ -10,11 +10,13 @@ router.post('/', postsCtrl.create);
 router.get('/', postsCtrl.index);
 //GET /posts/user
 router.get('/user', postsCtrl.forUser);
-router.put('/:id', postsCtrl.edit);
-//GET /posts/:id
-router.get('/:id', postsCtrl.show);
 //DELETE /posts/:id
 router.delete('/:id', postsCtrl.delete);
-//edit
+//GET /posts/:id
+// router.get('/:id', postsCtrl.show);
+//GET /posts/:id/edit
+router.get('/:id', postsCtrl.edit);
+//PUT /posts/:id
+router.put('/:id', postsCtrl.update);
 
 module.exports = router;

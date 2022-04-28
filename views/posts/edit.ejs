@@ -1,8 +1,6 @@
 <%- include('../partials/header') %>
 
 
-<% console.log(user._id) %>
-<% console.log(foundPost.user) %>
 <h2 class="updatePost">Update Post</h2>
 <form action="/posts/<%= foundPost._id %>?_method=PUT" method="POST" autocomplete="off">
   <label>Post:</label>

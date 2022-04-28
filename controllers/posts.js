@@ -8,6 +8,7 @@ module.exports = {
   forUser,
   delete: deletePost,
   show,
+  edit,
 };
 
 function newPost(req, res) {
@@ -31,13 +32,17 @@ function forUser(req, res) {
 
 function index(req, res) {
   Post.find({}, function (err, posts) {
-    res.render('posts/index', { posts, title: 'All Posts' });
-  });
-};
-
+      res.render('posts/index', { posts, title: 'All Posts' });
+    });
+  };
+  
 function show(req, res) {
-  Post.find({ user: req.user._id }, function(err, posts) {
-    
+  console.log("hello from show");
+  //console.log(req);
+  console.log(req.params.id);
+  Post.find({ _id: req.params.id }, function(err, foundPost) {
+    console.log(foundPost);
+    res.render('posts/edit', { foundPost, title: foundPost.title });
   });
 };
 
@@ -51,3 +56,8 @@ function deletePost(req, res) {
     });
   });
 }; 
+
+function edit(req, res) {
+  console.log("In edit");
+  console.log(req);
+};

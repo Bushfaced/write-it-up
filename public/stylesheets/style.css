@@ -85,3 +85,9 @@ body > main {
   border-radius: 50%;
 }
 
+#add-post {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 50%;
+}

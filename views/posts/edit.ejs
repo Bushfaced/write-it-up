@@ -1,0 +1,14 @@
+<%- include('../partials/header') %>
+
+  <h2 id="postPage">Posts</h2>
+  <% if (user) { %> 
+    <form id="add-post" method="PUT" action="/posts/update/<%= foundPost[0]._id %>">
+      <label>Post:</label>
+      <input name="title" type="text" value="<%= foundPost[0].title %>" >
+      <input name="genre" type="text" value="<%= foundPost[0].genre %>">
+      <textarea name="content"><%= foundPost[0].content %></textarea>
+      <input type="submit" value="Update Post">
+    </form>
+  <% } %>
+
+<%- include('../partials/footer') %>

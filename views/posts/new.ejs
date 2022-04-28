@@ -1,14 +1,14 @@
 <%- include('../partials/header') %>
 
-  <h2 id="postPage">Post</h2>
+  <h2 id="postPage">Posts</h2>
   <% if (user) { %>
-    <form id="add-writing-form" method="POST" action="/posts">
+    <form id="add-post" method="POST" action="/posts">
       <label>Post:</label>
       <input name="title" type="text" value="Title">
       <input name="genre" type="text" value="Genre">
       <textarea name="content"></textarea>
       <input type="submit" value="Add Post">
     </form>
-    <% } %>
+  <% } %>
 
 <%- include('../partials/footer') %>

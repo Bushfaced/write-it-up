@@ -8,20 +8,19 @@
     <button><i class="fas fa-search"></i>Search</button>
   </form>
   <% posts.forEach(function(p) { %>
-    <% console.log(p._id) %>
     <article id="postContent">
-      <p>
-        <%= p.title %>
-      </p>
+      <h3>
+        <a href="/posts/<%= p._id %>"><%= p.title %></a> 
+      </h3>
       <p>
         <%= p.genre %>
       </p>
       <p>
         <%= p.content %>
       </p>
-      <p>
+      <h4>
         <img id="userAvatar" src="<%= p.userAvatar %>"> <%= p.userName %>
-      </p>
+      </h4><br><br>
     </article>
     
     <td>

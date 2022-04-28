@@ -110,3 +110,11 @@ body > main {
 #contentBox {
   min-height: 200px;
 }
+
+#homeImgOne {
+  display: flex;
+  align-content: center;
+  max-width: 30%;
+  margin: auto;
+  border-radius: 75%;
+}

@@ -7,7 +7,6 @@ module.exports = {
   index,
   forUser,
   delete: deletePost,
-  // show,
   edit,
   update,
 };

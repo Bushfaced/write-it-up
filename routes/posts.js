@@ -15,7 +15,7 @@ router.delete('/:id', postsCtrl.delete);
 //GET /posts/:id
 // router.get('/:id', postsCtrl.show);
 //GET /posts/:id/edit
-router.get('/:id', postsCtrl.edit);
+router.get('/:id/edit', postsCtrl.edit);
 //PUT /posts/:id
 router.put('/:id', postsCtrl.update);
 

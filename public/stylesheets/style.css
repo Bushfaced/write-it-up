@@ -118,3 +118,7 @@ body > main {
   margin: auto;
   border-radius: 75%;
 }
+
+#homeMsg {
+  color:#e7ebed;
+}

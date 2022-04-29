@@ -1,6 +1,5 @@
 const Post = require('../models/post');
 
-
 module.exports = {
   new: newPost,
   create,
@@ -14,7 +13,7 @@ module.exports = {
 
 function update(req, res) {
   console.log(req.body);
-  Post.findOneAndUpdate({ _id: req.params.id, user: req.user._id}, req.body, {new: true}, function(err, updatedPost) {
+  Post.findOneAndUpdate({ _id: req.params.id, user: req.user._id }, req.body, { new: true }, function (err, updatedPost) {
     console.log(updatedPost);
     if (err || !updatedPost) return res.redirect('/posts');
     res.redirect(`/posts`)
@@ -22,7 +21,7 @@ function update(req, res) {
 };
 
 function edit(req, res) {
-  Post.findById(req.params.id, function(err, foundPost) {
+  Post.findById(req.params.id, function (err, foundPost) {
     res.render('posts/edit', { foundPost, title: foundPost.title });
   });
 };
@@ -61,11 +60,10 @@ function deletePost(req, res) {
       res.redirect('/posts/user');
     });
   });
-}; 
-
+};
 
 function show(req, res) {
-  Post.findById(req.params.id, function(err, foundPost) {
+  Post.findById(req.params.id, function (err, foundPost) {
     res.render('posts/show', { foundPost, title: foundPost.title });
   });
 };

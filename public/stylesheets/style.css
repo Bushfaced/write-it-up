@@ -3,7 +3,7 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-body > nav {
+body>nav {
   grid-area: nav;
   display: flex;
   justify-content: flex-end;
@@ -33,7 +33,7 @@ body > nav {
 }
 
 html {
-  background: url(https://cdn.pixabay.com/photo/2015/10/20/19/35/calligraphy-998331_1280.jpg) no-repeat center center fixed; 
+  background: url(https://cdn.pixabay.com/photo/2015/10/20/19/35/calligraphy-998331_1280.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -57,7 +57,7 @@ html {
   text-align: center;
   margin: auto;
   padding-bottom: 15px;
-  color:#e7ebed;
+  color: #e7ebed;
 }
 
 #edit {
@@ -76,6 +76,7 @@ html {
   color: #e7ebed;
   text-align: center;
 }
+
 #contentBox {
   display: flex;
   min-height: 200px;
@@ -93,7 +94,7 @@ html {
 }
 
 #homeMsg {
-  color:#e7ebed;
+  color: #e7ebed;
   text-align: center;
 }
 
@@ -118,7 +119,7 @@ html {
 }
 
 #linkColor {
-  color: #e7ebed;  
+  color: #e7ebed;
 }
 
 #nameColor {

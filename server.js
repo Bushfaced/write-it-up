@@ -9,9 +9,7 @@ var methodOverride = require('method-override');
 
 require('dotenv').config();
 require('./config/database');
-// configure passport
 require('./config/passport');
-
 
 var indexRouter = require('./routes/index');
 var postsRouter = require('./routes/posts');
@@ -36,7 +34,6 @@ app.use(session({
   saveUninitialized: true
 }));
 
-
 // Passport middleware
 app.use(passport.initialize());
 app.use(passport.session());
@@ -46,7 +43,6 @@ app.use(function (req, res, next) {
   res.locals.user = req.user;
   next();
 });
-
 
 const isLoggedIn = require('./config/auth');
 

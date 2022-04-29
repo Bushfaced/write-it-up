@@ -8,19 +8,23 @@
   <% posts.forEach(function(p) { %>
     <article>
       <h3 id="allPosts">
-        <a id="linkColor" href="/posts/<%= p._id %>"><%= p.title %></a> 
+        <a id="linkColor" href="/posts/<%= p._id %>">
+          <%= p.title %>
+        </a>
       </h3>
       <p id="allPosts">
         <%= p.genre %>
       </p>
       <h4 id="allPosts">
-        <img id="userAvatar" src="<%= p.userAvatar %>"> <a id="nameColor"><%= p.userName %></a>
+        <img id="userAvatar" src="<%= p.userAvatar %>"> <a id="nameColor">
+          <%= p.userName %>
+        </a>
       </h4><br>
       <% if (user && user._id.equals(p.user)) { %>
         <form action="/posts/<%= p._id %>?_method=DELETE" method="POST">
           <button type="submit">Delete Post</button>
         </form>
-      <% } %>
+        <% } %>
     </article>
   <% }) %>
 

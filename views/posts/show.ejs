@@ -1,10 +1,12 @@
 <%- include('../partials/header') %>
 
-
-<h2 id="read"><%= foundPost.title %></h2>
-<h2 id="read"><%= foundPost.genre %></h2>
-<textarea id="contentBox"><%= foundPost.content %></textarea>
-<a id="editLink" href="/posts/<%= foundPost._id %>/edit">Edit Post</a>
-
+  <h2 id="read">
+    <%= foundPost.title %>
+  </h2>
+  <h2 id="read">
+    <%= foundPost.genre %>
+  </h2>
+  <textarea id="contentBox"><%= foundPost.content %></textarea>
+  <a id="editLink" href="/posts/<%= foundPost._id %>/edit">Edit Post</a>
 
 <%- include('../partials/footer') %>

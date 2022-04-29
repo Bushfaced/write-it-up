@@ -40,75 +40,48 @@ html {
   background-size: cover;
 }
 
-body > main {
-  grid-area: main;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-}
-
-.displayTopHome {
-  border: black solid ;
-}
-
-.homeBox {
-  display: flex;
-  justify-content: flex-start;
-  border: solid black;
-}
-
-#authorLink {
-  display: flex;
-  flex-direction: column;
-  color: #e7ebed;
-  padding: 1em;
-}
-
-#genre {
-  color: #e7ebed;
-}
-
-#profile {
-  font-size: 2em;
-}
-
-.dropdown {
-  float: right;
-}
-
-#navPosts {
-  padding-left: 1em;
-}
-
 #userAvatar {
   border-radius: 50%;
+  max-height: 6vmin;
+  min-height: 4vmin;
 }
 
-#edPost {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  max-width: 70%;
-  margin: auto;
+#editLink {
+  position: relative;
+  top: 10px;
+  left: 400px;
+  color: #DC143C;
 }
 
-.addPost {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  max-width: 70%;
-  margin: auto;
-}
-
-.pTitle {
+#read {
   text-align: center;
   margin: auto;
   padding-bottom: 15px;
+  color:#e7ebed;
 }
 
+#edit {
+  display: flex;
+  margin: auto;
+  text-align: center;
+  min-width: 50%;
+}
+
+#editBtn {
+  display: flex;
+  margin: auto;
+}
+
+#eTitle {
+  color: #e7ebed;
+  text-align: center;
+}
 #contentBox {
+  display: flex;
   min-height: 200px;
+  min-width: 50%;
+  justify-content: center;
+  margin: auto;
 }
 
 #homeImgOne {
@@ -121,4 +94,33 @@ body > main {
 
 #homeMsg {
   color:#e7ebed;
+  text-align: center;
+}
+
+#addPost {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 70%;
+  margin: auto;
+}
+
+#addBtn {
+  display: flex;
+  margin: auto;
+}
+
+#allPosts {
+  display: flex;
+  margin: 10px auto;
+  display: inline-block;
+  color: #e7ebed;
+}
+
+#linkColor {
+  color: #e7ebed;  
+}
+
+#nameColor {
+  color: #e7ebed;
 }

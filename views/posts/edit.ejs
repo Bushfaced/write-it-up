@@ -1,12 +1,12 @@
 <%- include('../partials/header') %>
  
-<h2 class="pTitle">Update Post</h2>
-<form id="edPost" action="/posts/<%= foundPost._id %>?_method=PUT" method="POST" autocomplete="off">
-  <input name="title" type="text" value="<%= foundPost.title %>" >
-  <input name="genre" type="text" value="<%= foundPost.genre %>">
+<h2 id="eTitle">Edit Post</h2>
+<form action="/posts/<%= foundPost._id %>?_method=PUT" method="POST" autocomplete="off">
+  <input id="edit" name="title" type="text" value="<%= foundPost.title %>">
+  <input id="edit" name="genre" type="text" value="<%= foundPost.genre %>">
   <textarea id="contentBox" name="content"><%= foundPost.content %></textarea>
     <% if (user && user._id.equals(foundPost.user)) { %>
-        <input type="submit" value="Update Post">
+        <input id="editBtn" type="submit" value="Update Post">
     <% } %>    
 </form>
 

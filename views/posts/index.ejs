@@ -1,30 +1,27 @@
 <%- include('../partials/header') %>
 
-  <h2>
+  <h2 id="allPosts">
     <%= title %>
   </h2>
   <br>
   <br>
   <% posts.forEach(function(p) { %>
     <article>
-      <h3>
-        <a href="/posts/<%= p._id %>"><%= p.title %></a> 
+      <h3 id="allPosts">
+        <a id="linkColor" href="/posts/<%= p._id %>"><%= p.title %></a> 
       </h3>
-      <p>
+      <p id="allPosts">
         <%= p.genre %>
       </p>
-      <h4>
-        <img id="userAvatar" src="<%= p.userAvatar %>"> <%= p.userName %>
-      </h4><br><br>
-    </article>
-    
-    <td>
+      <h4 id="allPosts">
+        <img id="userAvatar" src="<%= p.userAvatar %>"> <a id="nameColor"><%= p.userName %></a>
+      </h4><br>
       <% if (user && user._id.equals(p.user)) { %>
         <form action="/posts/<%= p._id %>?_method=DELETE" method="POST">
           <button type="submit">Delete Post</button>
         </form>
       <% } %>
-    </td>
+    </article>
   <% }) %>
- 
+
 <%- include('../partials/footer') %>

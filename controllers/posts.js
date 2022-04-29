@@ -9,6 +9,7 @@ module.exports = {
   delete: deletePost,
   edit,
   update,
+  show,
 };
 
 function update(req, res) {
@@ -63,9 +64,8 @@ function deletePost(req, res) {
 }; 
 
 
-
-
-
-// function show(req, res) {
-//   //   
-// };
+function show(req, res) {
+  Post.findById(req.params.id, function(err, foundPost) {
+    res.render('posts/show', { foundPost, title: foundPost.title });
+  });
+};

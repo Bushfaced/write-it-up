@@ -13,7 +13,7 @@ router.get('/user', postsCtrl.forUser);
 //DELETE /posts/:id
 router.delete('/:id', postsCtrl.delete);
 //GET /posts/:id
-// router.get('/:id', postsCtrl.show);
+router.get('/:id', postsCtrl.show);
 //GET /posts/:id/edit
 router.get('/:id/edit', postsCtrl.edit);
 //PUT /posts/:id

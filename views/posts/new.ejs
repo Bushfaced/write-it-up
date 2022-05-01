@@ -1,13 +1,14 @@
 <%- include('../partials/header') %>
 
-  <h2 id="eTitle">Posts</h2>
+  <h2 id="eTitle">Story or Poem</h2>
   <% if (user) { %>
     <form method="POST" action="/posts">
-      <input id="edit" name="title" type="text" value="Title">
-      <input id="edit" name="genre" type="text" value="Genre">
+      <input id="edit" name="title" type="text" placeholder="Title">
+      <input id="edit" name="genre" type="text" placeholder="Genre">
       <textarea id="contentBox" name="content"></textarea>
       <input id="addBtn" type="submit" value="Add Post">
-    </form>
   <% } %>
+</form>
+
 
 <%- include('../partials/footer') %>

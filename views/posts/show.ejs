@@ -7,6 +7,40 @@
     <%= foundPost.genre %>
   </h2>
   <textarea id="contentBox"><%= foundPost.content %></textarea>
-  <a id="editLink" href="/posts/<%= foundPost._id %>/edit">Edit Post</a>
+   <a id="editLink" href="/posts/<%= foundPost._id %>/edit">Edit Post</a><br><br><br><br>
+  <% if (user) { %>
+    <form method="POST" action="/posts/<%= foundPost._id %>/comments">
+      <textarea id="commentBox" name="content"></textarea>
+      <input id="addComBtn" type="submit" value="Add Comment">
+    </form>
+  <% } %>
+  
+  <% if (foundPost.comments.length) { %>
+      <tbody>
+        <% let total = 0 %>
+        <% foundPost.comments.forEach(function(c) { %>
+          <% console.log(c._id) %>
+          <tr>
+            <td class="comment-user"><img alt="avatar" src="<%= c.userAvatar %>"><%= c.userName %></td>
+            <td><%= c.createdAt.toLocaleDateString() %></td>
+            <td><%= c.content %></td>
+            <td>
+              <% if (user && user._id.equals(c.user)) { %>
+                <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
+                  <button type="submit">X</button>
+                </form>
+                <form action="/comments/<%=c._id %>?_method=PUT" method="POST">
+                  <input name="content" value="<%= c.content %>">
+                </form>
+              <% } %>
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  <% } else { %>
+    <h5 id="noComments">No Comments Yet</h5>
+  <% } %>
+  
 
 <%- include('../partials/footer') %>

@@ -16,9 +16,8 @@
         <%= p.genre %>
       </p>
       <h4 id="allPosts">
-        <img id="userAvatar" src="<%= p.userAvatar %>"> <a id="nameColor">
-          <%= p.userName %>
-        </a>
+        <%= p.userName %>
+        <img id="userAvatar" src="<%= p.userAvatar %>"> <a id="nameColor"></a>
       </h4><br>
       <% if (user && user._id.equals(p.user)) { %>
         <form action="/posts/<%= p._id %>?_method=DELETE" method="POST">

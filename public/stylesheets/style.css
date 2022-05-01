@@ -3,8 +3,14 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-body>nav {
-  grid-area: nav;
+#homeAlone {
+  color: #e7ebed;
+  text-decoration: none;
+  font-size: xx-large;
+  margin: auto 320px;
+}
+
+body > nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -49,7 +55,7 @@ html {
 #editLink {
   position: relative;
   top: 10px;
-  left: 400px;
+  left: 410px;
   color: #DC143C;
 }
 
@@ -73,6 +79,11 @@ html {
 }
 
 #eTitle {
+  color: #e7ebed;
+  text-align: center;
+}
+
+#commentLbl {
   color: #e7ebed;
   text-align: center;
 }
@@ -123,5 +134,22 @@ html {
 }
 
 #nameColor {
+  color: #e7ebed;
+}
+
+#commentBox {
+  display: flex;
+  min-height: 200px;
+  min-width: 30%;
+  /* justify-content: center; */
+  margin: auto;
+}
+
+#addComBtn {
+  margin: auto 390px;
+  max-height: 20px;
+}
+
+#noComments {
   color: #e7ebed;
 }
